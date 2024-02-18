@@ -19,8 +19,8 @@ export default function CanvasPage() {
         <Guide />
         <Canvas />
 
-        <Link href="/home">Home</Link>
-        Made with ❤️ by{" Senzo masango"}
+        {/* <Link href="/home">Home</Link>
+        Made with ❤️ by{" Senzo masango"} */}
       </div>
     </main>
   );
