@@ -12,7 +12,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
+import { OrganizationSwitcher, SignOutButton, SignedIn, UserButton } from "@clerk/nextjs";
 import Logo from "@/components/ui/logo";
 import ThemeSwitcher from "@/components/ui/theme-switcher";
 import { navigationbarLinks } from "@/lib/data";
@@ -44,6 +44,10 @@ const Navigationbar = () => {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
+
+        <NavbarItem>
+          <UserButton afterSignOutUrl="/"/>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu>
@@ -58,6 +62,10 @@ const Navigationbar = () => {
         <NavbarMenuItem>
           <ThemeSwitcher />
         </NavbarMenuItem>
+
+        <NavbarItem>
+          <UserButton afterSignOutUrl="/"/>
+        </NavbarItem>
       </NavbarMenu>
 
       <NavbarContent className="sm:hidden" justify="end">

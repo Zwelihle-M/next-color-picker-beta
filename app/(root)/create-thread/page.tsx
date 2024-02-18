@@ -24,7 +24,7 @@ async function Page() {
         tracking={"wide"}
         className="mb-10"
       >
-        Create Thread
+        Create PaletteThread
       </Heading>
 
       <PostThread userId={userInfo._id} />

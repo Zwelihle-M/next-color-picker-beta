@@ -18,7 +18,8 @@ import ThemeSwitcher from "@/components/ui/theme-switcher";
 
 const Navigationbar = () => {
   return (
-    <Navbar maxWidth="xl" height="3rem" >
+    <Navbar    maxWidth="xl"
+    height="5rem">
 
 <NavbarBrand>
         <Logo />
@@ -42,10 +43,14 @@ const Navigationbar = () => {
           appearance={{
             baseTheme: dark,
             elements: {
-              organizationSwitcherTrigger: "py-2 px-4",
+              organizationSwitcherTrigger: "py-2 px-4 text-black dark:text-white ",
             },
           }}
         />
+
+<NavbarMenuItem>
+          <ThemeSwitcher />
+        </NavbarMenuItem>
       </NavbarContent>
 
     </Navbar>

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 
 import { fetchUser } from "@/lib/actions/user.actions";
 import AccountProfile from "@/components/forms/AccountProfile";
+import { Heading } from "@/components/ui/heading";
 
 async function Page() {
   const user = await currentUser();
@@ -21,14 +22,22 @@ async function Page() {
   };
 
   return (
-    <main className='mx-auto flex max-w-3xl flex-col justify-start px-10 py-20'>
-      <h1 className='head-text'>Onboarding</h1>
-      <p className='mt-3 text-base'>
+    <main className="mx-auto flex max-w-3xl flex-col justify-start px-10 py-20">
+      <Heading
+        font={"IFKica"}
+        size="sm"
+        fontWeight="bold"
+        tracking={"wide"}
+        className="mb-10"
+      >
+        Palette Onboarding
+      </Heading>
+      <p className="mt-3 text-base">
         Complete your profile now, to use Threds.
       </p>
 
-      <section className='mt-9  p-10'>
-        <AccountProfile user={userData} btnTitle='Continue' />
+      <section className="mt-9  p-10">
+        <AccountProfile user={userData} btnTitle="Continue" />
       </section>
     </main>
   );

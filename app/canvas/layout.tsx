@@ -5,7 +5,7 @@ import { NextUI } from "@/providers/nextui-provider";
 import { ThemeProvider } from "@/providers/next-theme-provider";
 import { Toaster } from "sonner";
 import Navigationbar from "@/components/navigationbar";
-
+import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Next Color Picker  Beta",
@@ -32,26 +32,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`font-Degular selection:bg-darkviolet selection:text-white`}
-      >
-        <NextUI>
-          <ThemeProvider
-            themes={["light", "dark"]}
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            storageKey="next-color-pick-key"
-          >
-            <Toaster position="top-center" richColors />
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`font-Degular selection:bg-darkviolet selection:text-white`}
+        >
+          <NextUI>
+            <ThemeProvider
+              themes={["light", "dark"]}
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              storageKey="next-color-pick-key"
+            >
+              <Toaster position="top-center" richColors />
 
-            <Navigationbar/>
+              <Navigationbar />
 
-            {children}
-          </ThemeProvider>
-        </NextUI>
-      </body>
-    </html>
+              {children}
+            </ThemeProvider>
+          </NextUI>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

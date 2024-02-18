@@ -60,7 +60,7 @@ export const sidebarNavigationlinks = [
   },
   {
     route: "/create-thread",
-    label: "Create Thread",
+    label: "Create PaletteThread",
     imgURL: React.createElement(PenLine),
   },
   {
