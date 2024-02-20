@@ -42,7 +42,7 @@ export const Progressbar = ({ target }: ProgressbarProps) => {
   return (
     <div className="w-full fixed top-0 left-0 right-0">
       <div
-        className="h-2 bg-gradient-to-r from-razzmatazz via-mediumpurple to-darkviolet"
+        className="h-4 bg-gradient-to-r from-razzmatazz via-mediumpurple to-darkviolet"
         style={{
           width: `${readingProgress}%`,
         }}

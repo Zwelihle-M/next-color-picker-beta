@@ -32,7 +32,7 @@ const Hero = () => {
               with a touch of sophistication
             </p>{" "}
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="#canvas">
+              <Link href="#guide">
                 <Button size="lg" radius="full" variant="bordered">
                   Get started
                 </Button>

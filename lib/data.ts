@@ -27,10 +27,7 @@ export const navigationbarLinks = [
     name: "Canvas",
     target: "#canvas-extractor",
   },
-  {
-    name: "Pricing",
-    target: "#pricing",
-  },
+
   {
     name: "PaletteThreads",
     target: "/",
@@ -63,11 +60,11 @@ export const sidebarNavigationlinks = [
     label: "Create PaletteThread",
     imgURL: React.createElement(PenLine),
   },
-  {
-    route: "/communities",
-    label: "Communities",
-    imgURL: React.createElement(Users),
-  },
+  // {
+  //   route: "/communities",
+  //   label: "Communities",
+  //   imgURL: React.createElement(Users),
+  // },
   {
     route: "/profile",
     label: "Profile",
@@ -77,8 +74,8 @@ export const sidebarNavigationlinks = [
 
 export const profileTabs = [
   {
-    value: "threads",
-    label: "Threads",
+    value: "paletteThreads",
+    label: "PaletteThreads",
     icon: React.createElement(MessageCircleHeart),
   },
   { value: "replies", label: "Replies", icon: React.createElement(Users) },

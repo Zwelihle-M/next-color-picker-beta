@@ -7,6 +7,7 @@ import { Heading } from "@/components/ui/heading";
 import { fetchPosts } from "@/lib/actions/thread.actions";
 import { fetchUser } from "@/lib/actions/user.actions";
 import Link from "next/link";
+import PaletteThreadCard from "@/components/cards/ThreadCard";
 
 async function Home({
   searchParams,
@@ -36,7 +37,7 @@ async function Home({
         ) : (
           <>
             {result.posts.map((post) => (
-              <ThreadCard
+              <PaletteThreadCard
                 key={post._id}
                 id={post._id}
                 currentUserId={user.id}
@@ -58,7 +59,7 @@ async function Home({
         isNext={result.isNext}
       />
 
-      <Link href={"/canvas"}>Canvas</Link>
+    
     </main>
   );
 }

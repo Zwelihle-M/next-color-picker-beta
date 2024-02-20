@@ -277,6 +277,27 @@ const Canvas = () => {
                   variant="bordered"
                 />
               </div>
+
+              {/* TODO: Extremely bugged breaks scroll feature on page */}
+
+              <div className="mb-10 flex gap-1">
+                <EyeDropper onColorPicked={handleColorPicked} />{" "}
+                <Popover placement="right">
+                  <PopoverTrigger style={{ backgroundColor: eyedroppercolor }}>
+                    <Button
+                      as="span"
+                      size="md"
+                      radius="full"
+                      variant="bordered"
+                      className="text-white"
+                      onClick={handleCopyColors}
+                    >
+                      {eyedroppercolor}
+                    </Button>
+                  </PopoverTrigger>
+                  =
+                </Popover>
+              </div>
             </CardBody>
           </Card>
           <Card
@@ -294,29 +315,6 @@ const Canvas = () => {
             </CardBody>
           </Card>
         </div>
-
-        {/* TODO: Extremely bugged breaks scroll feature on page */}
-
-        {/* <div className="mb-10 flex gap-1">
-          <EyeDropper onColorPicked={handleColorPicked} />{" "}
-          <Popover placement="right">
-            <PopoverTrigger style={{ backgroundColor: eyedroppercolor }}>
-              <Button as="span" size="md" radius="full" variant="bordered">
-                {eyedroppercolor}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent>
-              <div className="px-1 py-2">
-                <div
-                  className="text-small font-bold cursor-pointer overflow-hidden"
-                  onClick={handleCopyColors}
-                >
-                  {eyedroppercolor}
-                </div>
-              </div>
-            </PopoverContent>
-          </Popover>
-        </div> */}
 
         <div className="w-full mb-10">
           <Heading
@@ -468,14 +466,17 @@ const Canvas = () => {
             <CardBody>Comming Soon</CardBody>
           </Card>
         </div>
-        <Button
-          onClick={downloadPDF}
-          size="lg"
-          radius="full"
-          variant="bordered"
-        >
-          Download PDF
-        </Button>
+
+        <div className="flex justify-center items-center pt-5 pb-20">
+          <Button
+            onClick={downloadPDF}
+            size="lg"
+            radius="full"
+            variant="bordered"
+          >
+            Download PDF
+          </Button>
+        </div>
       </div>
     </Container>
   );

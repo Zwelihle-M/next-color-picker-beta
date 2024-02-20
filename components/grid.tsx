@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Grid = () => {
-  return (
-    <div>Grid</div>
-  )
-}
+  return <div>Artist Drawing Grid</div>;
+};
 
-export default Grid
+export default Grid;

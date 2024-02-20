@@ -32,7 +32,7 @@ interface Props {
   isComment?: boolean;
 }
 
-function ThreadCard({
+function PaletteThreadCard({
   id,
   currentUserId,
   parentId,
@@ -155,4 +155,4 @@ function ThreadCard({
   );
 }
 
-export default ThreadCard;
+export default PaletteThreadCard;
