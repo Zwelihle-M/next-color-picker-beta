@@ -45,16 +45,16 @@ export const sidebarNavigationlinks = [
     label: "Canvas",
     imgURL: React.createElement(Palette),
   },
-  {
-    route: "/search",
-    label: "Search",
-    imgURL: React.createElement(Search),
-  },
-  {
-    route: "/activity",
-    label: "Activity",
-    imgURL: React.createElement(MessageCircleHeart),
-  },
+  // {
+  //   route: "/search",
+  //   label: "Search",
+  //   imgURL: React.createElement(Search),
+  // },
+  // {
+  //   route: "/activity",
+  //   label: "Activity",
+  //   imgURL: React.createElement(MessageCircleHeart),
+  // },
   {
     route: "/create-thread",
     label: "Create PaletteThread",
